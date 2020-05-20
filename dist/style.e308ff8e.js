@@ -117,83 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
-console.log("Hello");
-var container = document.querySelector(".container");
-var foodItems = [{
-  name: "Rasta Pasta",
-  image: "https://i.imgur.com/lYUWCee.jpg"
-}, {
-  name: "Jerk Chicken",
-  image: "https://i.imgur.com/bQ9k9jU.jpg"
-}, {
-  name: "Stew Chicken",
-  image: "https://i.imgur.com/CbzZJad.jpg"
-}, {
-  name: "BBQ Chicken",
-  image: "https://i.imgur.com/a1oZ96h.jpg"
-}, {
-  name: "Curry Shrimp",
-  image: "https://i.imgur.com/TjsNwT3.jpg"
-}, {
-  name: "Escovitch Fish",
-  image: "https://i.imgur.com/uXiIuVq.jpg"
-}, {
-  name: "Stew Fish",
-  image: "https://i.imgur.com/9FJv8cL.jpg"
-}, {
-  name: "Oxtail",
-  image: "https://i.imgur.com/pAmQdVM.jpg"
-}, {
-  name: "Curry Goat",
-  image: "https://i.imgur.com/RC6jS0m.jpg"
-}, {
-  name: "Curry Chicken",
-  image: "https://i.imgur.com/Xfei0dp.jpg"
-}, {
-  name: "Stew Beef",
-  image: "https://i.imgur.com/bQ9k9jU.jpg"
-}, {
-  name: "Baked Chicken",
-  image: "https://i.imgur.com/aU3QhRW.jpg"
-}, {
-  name: "Pepper Steak",
-  image: "https://i.imgur.com/2WL4e5O.jpg"
-}, {
-  name: "Stew Peas",
-  image: "https://i.imgur.com/ePc6KcG.jpg"
-}, {
-  name: "Cow Foot",
-  image: "https://i.imgur.com/nPuxYaW.jpg"
-}, {
-  name: "Fried Chicken",
-  image: "https://i.imgur.com/st5lwVw.jpg"
-}]; // const foodItems = [
-//     { name: "Rasta Pasta", image: "images/RP.jpg" },
-//     { name: "Jerk Chicken", image: "images/JC.jpg" },
-//     { name: "Stew Chicken", image: "images/SC.jpg" },
-//     { name: "BBQ Chicken", image: "images/BBQC.jpg" },
-//     { name: "Curry Shrimp", image: "images/CS.jpg" },
-//     { name: "Escovitch Fish", image: "images/EF.jpg" },
-//     { name: "Stew Fish", image: "images/SF.jpg" },
-//     { name: "Oxtail", image: "images/OX.jpg" },
-//     { name: "Curry Goat", image: "images/CG.jpg" },
-//   ]
+})({"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-console.log(foodItems);
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-var showFoodItems = function showFoodItems() {
-  var output = " ";
-  foodItems.forEach(function (_ref) {
-    var name = _ref.name,
-        image = _ref.image;
-    return output += "\n                <div class=\"card\">\n                  <img class=\"card--image\" src=".concat(image, " />\n                  <h1 class=\"card--title\">").concat(name, "</h1>\n                  <a class=\"card--link\" href=\"#\">Select</a>\n                </div>\n                ");
-  });
-  container.innerHTML = output;
-};
+  return bundleURL;
+}
 
-document.addEventListener("DOMContentLoaded", showFoodItems);
-},{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/catering-site.e31bb0bc.js.map
+},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/style.e308ff8e.js.map
