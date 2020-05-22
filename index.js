@@ -1,3 +1,4 @@
+// import { sideItems } from './sides.js';
 console.log("Hello");
 
 const container = document.querySelector(".container")
@@ -19,6 +20,7 @@ const foodItems = [
   { name: "Cow Foot", image: "https://i.imgur.com/nPuxYaW.jpg" },
   { name: "Fried Chicken", image: "https://i.imgur.com/st5lwVw.jpg" },
 ]
+
 // const foodItems = [
 //     { name: "Rasta Pasta", image: "images/RP.jpg" },
 //     { name: "Jerk Chicken", image: "images/JC.jpg" },

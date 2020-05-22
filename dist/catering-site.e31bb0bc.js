@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+// import { sideItems } from './sides.js';
 console.log("Hello");
 var container = document.querySelector(".container");
 var foodItems = [{
@@ -221,7 +222,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50590" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64696" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
