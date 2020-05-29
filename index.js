@@ -1,5 +1,6 @@
+// const app = express();
+
 // import { sideItems } from './sides.js';
-console.log("Hello");
 
 const container = document.querySelector(".container")
 const foodItems = [
@@ -21,17 +22,6 @@ const foodItems = [
   { name: "Fried Chicken", image: "https://i.imgur.com/st5lwVw.jpg" },
 ]
 
-// const foodItems = [
-//     { name: "Rasta Pasta", image: "images/RP.jpg" },
-//     { name: "Jerk Chicken", image: "images/JC.jpg" },
-//     { name: "Stew Chicken", image: "images/SC.jpg" },
-//     { name: "BBQ Chicken", image: "images/BBQC.jpg" },
-//     { name: "Curry Shrimp", image: "images/CS.jpg" },
-//     { name: "Escovitch Fish", image: "images/EF.jpg" },
-//     { name: "Stew Fish", image: "images/SF.jpg" },
-//     { name: "Oxtail", image: "images/OX.jpg" },
-//     { name: "Curry Goat", image: "images/CG.jpg" },
-//   ]
 console.log(foodItems);
 
 const showFoodItems = () => {
@@ -42,7 +32,7 @@ const showFoodItems = () => {
                 <div class="card">
                   <img class="card--image" src=${image} />
                   <h1 class="card--title">${name}</h1>
-                  <a class="card--link" href="#">Select</a>
+                  <a class="card--link" href="/sides.html">Select</a>
                 </div>
                 `)
     )
@@ -50,3 +40,26 @@ const showFoodItems = () => {
   }
   
   document.addEventListener("DOMContentLoaded", showFoodItems)
+
+
+
+
+
+
+
+
+
+
+
+
+  // const foodItems = [
+//     { name: "Rasta Pasta", image: "images/RP.jpg" },
+//     { name: "Jerk Chicken", image: "images/JC.jpg" },
+//     { name: "Stew Chicken", image: "images/SC.jpg" },
+//     { name: "BBQ Chicken", image: "images/BBQC.jpg" },
+//     { name: "Curry Shrimp", image: "images/CS.jpg" },
+//     { name: "Escovitch Fish", image: "images/EF.jpg" },
+//     { name: "Stew Fish", image: "images/SF.jpg" },
+//     { name: "Oxtail", image: "images/OX.jpg" },
+//     { name: "Curry Goat", image: "images/CG.jpg" },
+//   ]

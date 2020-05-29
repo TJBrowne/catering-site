@@ -118,8 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+// const app = express();
 // import { sideItems } from './sides.js';
-console.log("Hello");
 var container = document.querySelector(".container");
 var foodItems = [{
   name: "Rasta Pasta",
@@ -169,7 +169,20 @@ var foodItems = [{
 }, {
   name: "Fried Chicken",
   image: "https://i.imgur.com/st5lwVw.jpg"
-}]; // const foodItems = [
+}];
+console.log(foodItems);
+
+var showFoodItems = function showFoodItems() {
+  var output = " ";
+  foodItems.forEach(function (_ref) {
+    var name = _ref.name,
+        image = _ref.image;
+    return output += "\n                <div class=\"card\">\n                  <img class=\"card--image\" src=".concat(image, " />\n                  <h1 class=\"card--title\">").concat(name, "</h1>\n                  <a class=\"card--link\" href=\"/sides.html\">Select</a>\n                </div>\n                ");
+  });
+  container.innerHTML = output;
+};
+
+document.addEventListener("DOMContentLoaded", showFoodItems); // const foodItems = [
 //     { name: "Rasta Pasta", image: "images/RP.jpg" },
 //     { name: "Jerk Chicken", image: "images/JC.jpg" },
 //     { name: "Stew Chicken", image: "images/SC.jpg" },
@@ -180,20 +193,6 @@ var foodItems = [{
 //     { name: "Oxtail", image: "images/OX.jpg" },
 //     { name: "Curry Goat", image: "images/CG.jpg" },
 //   ]
-
-console.log(foodItems);
-
-var showFoodItems = function showFoodItems() {
-  var output = " ";
-  foodItems.forEach(function (_ref) {
-    var name = _ref.name,
-        image = _ref.image;
-    return output += "\n                <div class=\"card\">\n                  <img class=\"card--image\" src=".concat(image, " />\n                  <h1 class=\"card--title\">").concat(name, "</h1>\n                  <a class=\"card--link\" href=\"#\">Select</a>\n                </div>\n                ");
-  });
-  container.innerHTML = output;
-};
-
-document.addEventListener("DOMContentLoaded", showFoodItems);
 },{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -222,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64696" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64577" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
