@@ -3,13 +3,13 @@
 
 const sideContainer = document.querySelector(".sideContainer")
 const sideItems = [
-    {name: "White Rice", image:"https://i.imgur.com/TBpz2j3.jpg" },
-    {name: "Brown Rice", image:"https://i.imgur.com/5ACLJR0.jpg" },
-    {name: "Rice & Peas", image:"https://i.imgur.com/65r8Omt.jpg" },
-    {name: "Mac & Cheese", image:"https://i.imgur.com/b5XgGDR.jpg" },
-    {name: "Mashed Potatoes", image:"https://i.imgur.com/Gp70GY8.jpg" },
-    {name: "Salad", image:"https://i.imgur.com/Uaqd6vK.png" },
-    {name: "Provisions", image:"https://i.imgur.com/iY726AK.jpg" },
+    {name: "White Rice", image:"https://i.imgur.com/FbGJPc5.jpg" },
+    {name: "Brown Rice", image:"https://i.imgur.com/NjALbMb.jpg" },
+    {name: "Rice & Peas", image:"https://i.imgur.com/k6aZuSc.jpg" },
+    {name: "Mac & Cheese", image:"https://i.imgur.com/KlcbOFJ.jpg" },
+    {name: "Mashed Potatoes", image:"https://i.imgur.com/X0TlsAo.jpg" },
+    {name: "Salad", image:"https://i.imgur.com/6fCYMNu.png" },
+    {name: "Provisions", image:"https://i.imgur.com/PmtyCDE.jpg" },
 ]
 console.log(sideItems);
 
